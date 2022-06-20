@@ -1,7 +1,22 @@
-﻿
+﻿@model HomeVM
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>
+    <ul style="background: green"> 
+        @foreach (var item in Model.Students)
+       {
+           <li style="list-style: none;color: cyan">@item.Id @item.Name @item.Surname @item.Age </li>
+       }
+       <br />
+       <hr />
+       <br />
+          @foreach (var item in Model.Groups)
+       {
+           <li>@item.Id @item.GroupName</li>
+       }
+    </ul>
+
+</h1>
 
